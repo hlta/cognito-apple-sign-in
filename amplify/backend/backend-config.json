@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"cognitoapplesignin0c2c2462": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}
