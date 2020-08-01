@@ -13,7 +13,9 @@
         },
         "categories": {
             "auth": {
-                "cognitoapplesignin0c2c2462": {}
+                "cognitoapplesignin0c2c2462": {
+                    "hostedUIProviderCreds": "[]"
+                }
             }
         }
     }

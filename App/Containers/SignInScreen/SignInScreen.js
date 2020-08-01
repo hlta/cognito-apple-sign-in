@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Image, Text} from 'react-native';
+import {View, Image, Text, Button} from 'react-native';
+import { Auth, Hub } from 'aws-amplify';
 import appleAuth, {
   AppleButton,
   AppleAuthError,
@@ -7,7 +8,7 @@ import appleAuth, {
   AppleAuthRequestOperation,
 } from '@invertase/react-native-apple-authentication';
 import Style from './SignInScreenStyle';
-import {Helpers, Images, Metrics} from 'App/Theme';
+import {Helpers, Images, Metrics, ApplicationStyles} from 'App/Theme';
 
 const SignInScreen = (props) => {
   const handleSignIn = async (data) => {
@@ -64,6 +65,11 @@ const SignInScreen = (props) => {
           buttonType={AppleButton.Type.SIGN_IN}
           style={Style.appleButton}
           onPress={() => onAppleButtonPress()}
+        />
+        <Button
+          style={ApplicationStyles.button}
+          onPress={() => Auth.federatedSignIn({provider: 'Google'})}
+          title="Web Sign In"
         />
       </View>
     </View>
