@@ -1,6 +1,3 @@
-import {NavigationActions, StackActions} from 'react-navigation-stack';
-import Colors from '../Theme/Colors';
-
 /**
  * The navigation is implemented as a service so that it can be used outside of components, for example in sagas.
  *
@@ -23,12 +20,7 @@ function setTopLevelNavigator(navigatorRef) {
  * @param params Route parameters.
  */
 function navigate(routeName, params) {
-  navigator.current?.dispatch(
-    NavigationActions.navigate({
-      routeName,
-      params,
-    }),
-  );
+  navigator.navigate(routeName, params);
 }
 
 /**
@@ -41,18 +33,10 @@ function navigate(routeName, params) {
  * @param params Route parameters.
  */
 function navigateAndReset(routeName, params) {
-  navigator.current?.dispatch(
-    StackActions.reset({
-      index: 0,
-      key: null,
-      actions: [
-        NavigationActions.navigate({
-          routeName,
-          params,
-        }),
-      ],
-    }),
-  );
+  navigator.resetRoot({
+    index: 0,
+    routes: [{name: routeName, ...params}],
+  });
 }
 
 export default {
