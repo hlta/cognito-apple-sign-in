@@ -51,5 +51,5 @@
     "hostedUIDomainName": "studioanon",
     "authProvidersUserPool": [],
     "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://localhost/\"],\"LogoutURLs\":[\"https://localhost/\"]}"
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"cognitosignin://\"],\"LogoutURLs\":[\"cognitosignin://\"]}"
 }

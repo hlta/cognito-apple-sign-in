@@ -18,4 +18,8 @@ export default StyleSheet.create({
     },
     marginVertical: 45,
   },
+  textStyle: {
+    marginVertical: 50,
+    textAlign: 'center',
+  },
 });
